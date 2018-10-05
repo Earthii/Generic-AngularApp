@@ -7,6 +7,6 @@ export class ImageService {
   constructor(private http: HttpClient) {}
 
   get(): Observable<any> {
-    return this.http.get('http://localhost:8080/api');
+    return this.http.get('http://localhost:3000/api');
   }
 }
