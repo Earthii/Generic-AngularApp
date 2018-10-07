@@ -1,4 +1,10 @@
-$header-height: 3em;
-$header-background: #fff;
+$white: #fff;
+$light-grey: #fafafa;
+$dark-grey: #d1d1d1;
 
-$content-background: #fafafa;
+$header-height: 3em;
+$header-background: $white;
+
+$content-background: $light-grey;
+
+$mobile-screen-threshold :620px;
