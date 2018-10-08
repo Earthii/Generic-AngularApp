@@ -6,9 +6,7 @@
 }
 .content{
     height:calc(100% - #{$header-height} - 1px);
-    display:flex;
-    background-color: $content-background;
-    
+    background-color: $content-background;    
 }
 .mobile-menu{
     display:none;
