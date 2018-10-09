@@ -48,11 +48,20 @@
       color: $white;
       border-radius: 2px;
       font-weight: bold;
+      outline:none;
+      &:disabled{
+        opacity:0.3;
+      }
     }
     > a {
       margin-top: 10px;
       text-align: center;
       width: 100%;
+    }
+    .err-msg{
+      color:$error-red;
+      margin-top:5px;
+      align-self: flex-start;
     }
   }
 }

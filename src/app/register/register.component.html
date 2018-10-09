@@ -1,15 +1,21 @@
 <div class="login-container">
-    <form class="form">
+    <form class="form" [formGroup]="registerForm" novalidate>
         <label>Register</label>
         <div class="form-row">
-            <i class="far fa-user"></i><input placeholder="username" />
+            <i class="far fa-user"></i>
+            <input placeholder="username" name="username" formControlName="username"/>
         </div>
         <div class="form-row">
-            <i class="fas fa-key"></i><input placeholder="password" />
+            <i class="fas fa-key"></i>
+            <input placeholder="password" name="password" type="password" formControlName="password"/>
         </div>
         <div class="form-row">
-            <i class="fas fa-key"></i><input placeholder="confirm password" />
+            <i class="fas fa-key"></i>
+            <input placeholder="confirm password" type="password" name="confirmPass" formControlName="confirmPass"/>
         </div>
-        <button type="submit">Submit</button>
+        <button type="button" (click)="register()" [disabled]="registerForm.invalid">Submit</button>
+        <div class="err-msg" *ngIf="error">
+            Error: {{error}}
+        </div>
     </form>
 </div>

@@ -8,12 +8,12 @@ import { AppRouterModule, routingComponents } from './routes/app-router.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 
-import { ImageService } from './services/image.service';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, routingComponents],
   imports: [BrowserModule, SharedModule, HttpClientModule, AppRouterModule],
-  providers: [ImageService],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
