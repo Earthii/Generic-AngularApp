@@ -19,9 +19,17 @@ export class AuthService {
   }
 
   login(username: string, password: string) {
-    return this.http.post(this.baseUrl + '/auth/login', {
-      username: username,
-      password: password
-    });
+    return this.http.post(
+      this.baseUrl + '/auth/login',
+      {
+        username: username,
+        password: password
+      },
+      { withCredentials: true }
+    );
+  }
+
+  logout() {
+    return this.http.get(this.baseUrl + '/auth/logout');
   }
 }

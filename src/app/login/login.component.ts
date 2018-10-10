@@ -28,6 +28,7 @@ export class LoginComponent {
     const password = this.loginForm.controls['password'].value;
 
     this.authService.login(username, password).subscribe(res => {
+      console.log(res);
       this.router.navigate(['/']);
     }, err => {
       this.error = err.error;
